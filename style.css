@@ -147,3 +147,51 @@ button:hover{
 .card p{
     color: #cbd5e1;
 }
+/* Responsive Design */
+
+@media(max-width: 768px){
+
+    .navbar{
+        flex-direction: column;
+
+        padding: 20px;
+    }
+
+    .menu{
+        margin-top: 15px;
+    }
+
+    .menu a{
+        margin: 0 10px;
+    }
+
+    .hero-text h2{
+        font-size: 35px;
+    }
+
+    .hero-text p{
+        font-size: 16px;
+    }
+
+    .feature-box{
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+/* Footer */
+
+.footer{
+    background-color: #111827;
+
+    padding: 20px;
+
+    text-align: center;
+
+    margin-top: 50px;
+}
+
+
+.footer p{
+    color: #cbd5e1;
+}
