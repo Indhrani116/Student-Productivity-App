@@ -443,3 +443,90 @@ button:hover{
 .register-text a:hover{
     text-decoration: underline;
 }
+
+.delete-btn{
+    padding: 5px 10px;
+    margin-left: 10px;
+    background-color: crimson;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-btn:hover{
+    background-color: darkred;
+}
+
+/* Task Manager */
+
+.task-container{
+    width: 700px;
+
+    margin: 50px auto;
+
+    background-color: #1e293b;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.task-container h1{
+    margin-bottom: 10px;
+}
+
+#taskCount{
+    color: #38bdf8;
+
+    margin-bottom: 20px;
+}
+
+#taskInput{
+    width: 70%;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    margin-right: 10px;
+}
+
+#taskList{
+    list-style: none;
+
+    margin-top: 25px;
+}
+
+#taskList li{
+    background-color: #0f172a;
+
+    padding: 12px 15px;
+
+    margin-bottom: 12px;
+
+    border-radius: 8px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+#addBtn{
+    padding: 12px 20px;
+    height: 48px;
+}
+
+#taskList li{
+    transition: all 0.3s ease;
+}
+
+#taskList li:hover{
+    transform: translateX(5px);
+}
