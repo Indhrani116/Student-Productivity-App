@@ -79,7 +79,7 @@ button{
     padding: 12px 25px;
 
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
 
     background-color: #38bdf8;
 
@@ -88,11 +88,17 @@ button{
     font-size: 16px;
 
     cursor: pointer;
+
+    transition: all 0.3s ease;
 }
 
 
 button:hover{
     background-color: #0ea5e9;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 20px rgba(56, 189, 248, 0.3);
 }
 /* Features Section */
 
@@ -129,11 +135,13 @@ button:hover{
     border-radius: 10px;
 
     transition: 0.3s;
+    transition: all 0.3s ease;
 }
-
 
 .card:hover{
     transform: translateY(-10px);
+
+    box-shadow: 0 10px 25px rgba(56, 189, 248, 0.2);
 }
 
 
@@ -327,6 +335,12 @@ button:hover{
     padding: 25px;
     background-color: #1e293b;
     border-radius: 10px;
+    transition: all 0.3s ease;
+}
+.why-card:hover{
+    transform: translateY(-10px);
+
+    box-shadow: 0 10px 25px rgba(56, 189, 248, 0.2);
 }
 
 .why-card h3{
@@ -362,6 +376,12 @@ button:hover{
     padding: 30px;
     background-color: #1e293b;
     border-radius: 10px;
+    transition: all 0.3s ease;
+}
+.stat-card:hover{
+    transform: translateY(-10px);
+
+    box-shadow: 0 10px 25px rgba(56, 189, 248, 0.2);
 }
 
 .stat-card h3{
