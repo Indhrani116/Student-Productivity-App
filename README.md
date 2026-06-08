@@ -9,9 +9,18 @@ A full stack productivity web application being built while learning modern web 
 - Authentication
 - Responsive UI
 
+## Current Features
+- Landing Page
+- Dashboard UI
+- Login Page
+- Register Page
+- Responsive Design
+- Hover Animations
+
 ## Tech Stack
 - HTML
 - CSS
+## Upcomig
 - JavaScript
 
 ## Future Plans
