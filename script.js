@@ -29,7 +29,8 @@ function displayTask(task){
 
     let newTask = document.createElement("li");
 
-   newTask.innerText = task.text;
+   newTask.innerText =
+"[" + task.category + "] " + task.text;
    if(task.completed){
     newTask.classList.add("completed-task");
 }
@@ -104,14 +105,16 @@ let button = document.getElementById("addBtn");
 button.addEventListener("click", function(){
 
     let task = document.getElementById("taskInput").value;
+    let category = document.getElementById("categoryInput").value;
 
     if(task === ""){
         alert("Please enter a task");
         return;
     }
 
-    let taskObject = {
+   let taskObject = {
     text: task,
+    category: category,
     completed: false
 };
 
