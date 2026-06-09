@@ -15,6 +15,18 @@ function displayTask(task){
 
     newTask.innerText = task;
 
+    let completeBtn = document.createElement("button");
+
+    completeBtn.innerText = "Complete";
+
+    completeBtn.classList.add("complete-btn");
+
+    completeBtn.addEventListener("click", function(){
+
+    newTask.classList.toggle("completed-task");
+
+});
+
     let deleteBtn = document.createElement("button");
 
     deleteBtn.innerText = "Delete";
@@ -35,6 +47,8 @@ function displayTask(task){
     updateTaskCount();
 
 });
+
+newTask.appendChild(completeBtn);
 
     newTask.appendChild(deleteBtn);
 

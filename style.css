@@ -530,3 +530,29 @@ button:hover{
 #taskList li:hover{
     transform: translateX(5px);
 }
+
+.complete-btn{
+    padding: 5px 10px;
+
+    margin-left: 10px;
+
+    background-color: seagreen;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+.complete-btn:hover{
+    background-color: green;
+}
+
+.completed-task{
+    text-decoration: line-through;
+
+    color: #94a3b8;
+}
