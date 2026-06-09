@@ -13,7 +13,10 @@ function displayTask(task){
 
     let newTask = document.createElement("li");
 
-    newTask.innerText = task;
+   newTask.innerText = task.text;
+   if(task.completed){
+    newTask.classList.add("completed-task");
+}
 
     let completeBtn = document.createElement("button");
 
@@ -21,11 +24,17 @@ function displayTask(task){
 
     completeBtn.classList.add("complete-btn");
 
-    completeBtn.addEventListener("click", function(){
+   completeBtn.addEventListener("click", function(){
+
+    task.completed = !task.completed;
+
+    localStorage.setItem("tasks", JSON.stringify(tasks));
 
     newTask.classList.toggle("completed-task");
 
 });
+
+
 
     let deleteBtn = document.createElement("button");
 
@@ -48,9 +57,12 @@ function displayTask(task){
 
 });
 
-newTask.appendChild(completeBtn);
+    let buttonGroup = document.createElement("div");
 
-    newTask.appendChild(deleteBtn);
+buttonGroup.appendChild(completeBtn);
+buttonGroup.appendChild(deleteBtn);
+
+newTask.appendChild(buttonGroup);
 
     list.appendChild(newTask);
 }
@@ -80,11 +92,16 @@ button.addEventListener("click", function(){
         return;
     }
 
-    tasks.push(task);
+    let taskObject = {
+    text: task,
+    completed: false
+};
+
+tasks.push(taskObject);
 
     localStorage.setItem("tasks", JSON.stringify(tasks));
 
-    displayTask(task);
+    displayTask(taskObject);
     updateTaskCount();
 
     document.getElementById("taskInput").value = "";
