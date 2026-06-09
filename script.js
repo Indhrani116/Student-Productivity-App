@@ -5,6 +5,22 @@ function updateTaskCount(){
     counter.innerText = "Total Tasks: " + tasks.length;
 
 }
+function updateStatistics(){
+
+    let completed = tasks.filter(function(task){
+
+        return task.completed === true;
+
+    }).length;
+
+    let pending = tasks.length - completed;
+
+    document.getElementById("completedCount").innerText =
+    "Completed: " + completed;
+
+    document.getElementById("pendingCount").innerText =
+    "Pending: " + pending;
+}
 let tasks = [];
 
 function displayTask(task){
@@ -31,6 +47,7 @@ function displayTask(task){
     localStorage.setItem("tasks", JSON.stringify(tasks));
 
     newTask.classList.toggle("completed-task");
+    updateStatistics();
 
 });
 
@@ -80,6 +97,7 @@ tasks.forEach(function(task){
 
 });
  updateTaskCount();
+ updateStatistics();
 
 let button = document.getElementById("addBtn");
 
@@ -103,6 +121,7 @@ tasks.push(taskObject);
 
     displayTask(taskObject);
     updateTaskCount();
+    updateStatistics();
 
     document.getElementById("taskInput").value = "";
 
