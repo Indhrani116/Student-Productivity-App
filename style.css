@@ -569,3 +569,49 @@ button:hover{
     display: flex;
     gap: 10px;
 }
+
+.dash-card{
+    transition: all 0.3s ease;
+}
+
+.dash-card:hover{
+    transform: translateY(-10px);
+
+    box-shadow: 0 10px 25px rgba(56,189,248,0.2);
+}
+
+
+
+.search-filter-container{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+#searchInput{
+    width: 250px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+}
+
+#taskCount,
+#completedCount,
+#pendingCount{
+    color: #38bdf8;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.stats-row{
+    display: flex;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+.stats-row h3{
+    color: #38bdf8;
+    font-size:16px;
+    font-weight:600;
+}

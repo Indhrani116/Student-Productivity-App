@@ -123,9 +123,23 @@ let allBtn = document.getElementById("allBtn");
 let completedBtn = document.getElementById("completedBtn");
 
 let pendingBtn = document.getElementById("pendingBtn");
+let searchInput = document.getElementById("searchInput");
 allBtn.addEventListener("click", function(){
 
     renderTasks(tasks);
+
+});
+searchInput.addEventListener("input", function(){
+
+    let searchText = searchInput.value.toLowerCase();
+
+    let filteredTasks = tasks.filter(function(task){
+
+        return task.text.toLowerCase().includes(searchText);
+
+    });
+
+    renderTasks(filteredTasks);
 
 });
 completedBtn.addEventListener("click", function(){

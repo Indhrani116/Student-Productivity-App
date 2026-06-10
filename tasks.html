@@ -8,35 +8,47 @@
 
 <body>
 
+    <body>
+
     <div class="task-container">
 
         <h1>Task Manager</h1>
-        <h3 id="taskCount">
-    Total Tasks: 0
-</h3>
-<h3 id="completedCount">Completed: 0</h3>
 
-<h3 id="pendingCount">Pending: 0</h3>
+        <div class="stats-row">
+
+            <h3 id="taskCount">Total Tasks: 0</h3>
+
+            <h3 id="completedCount">Completed: 0</h3>
+
+            <h3 id="pendingCount">Pending: 0</h3>
+
+        </div>
 
         <input
             type="text"
             id="taskInput"
             placeholder="Enter a task"
         >
-        
 
         <button id="addBtn">
             Add Task
         </button>
-        <div class="filter-buttons">
 
-    <button id="allBtn">All</button>
+        <div class="search-filter-container">
 
-    <button id="completedBtn">Completed</button>
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search tasks..."
+            >
 
-    <button id="pendingBtn">Pending</button>
+            <button id="allBtn">All</button>
 
-</div>
+            <button id="completedBtn">Completed</button>
+
+            <button id="pendingBtn">Pending</button>
+
+        </div>
 
         <ul id="taskList">
 
