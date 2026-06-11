@@ -615,3 +615,39 @@ button:hover{
     font-size:16px;
     font-weight:600;
 }
+
+.theme-btn{
+    margin-bottom: 20px;
+}
+.light-theme{
+    background-color: white;
+    color: black;
+}
+
+.light-theme .task-container{
+    background-color: white;
+}
+
+.light-theme .task-container h1{
+    color: black;
+}
+
+.light-theme li{
+    background-color: #f1f5f9;
+    color: black;
+}
+
+.progress-bar{
+    width: 100%;
+    height: 18px;
+    background-color: #0b1633;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 15px 0;
+}
+
+#progressFill{
+    height: 100%;
+    background-color: #38bdf8;
+    transition: width 0.5s ease;
+}

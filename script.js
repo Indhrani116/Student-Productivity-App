@@ -78,6 +78,14 @@ updateStatistics();
 
     });
 
+    let getStartedBtn = document.getElementById("getStartedBtn");
+
+getStartedBtn.addEventListener("click", function () {
+
+    window.location.href = "dashboard.html";
+
+});
+
     let buttonGroup = document.createElement("div");
 
     buttonGroup.appendChild(completeBtn);
@@ -194,4 +202,42 @@ button.addEventListener("click", function () {
     updateStatistics();
 
     document.getElementById("taskInput").value = "";
+});
+
+let themeBtn = document.getElementById("themeBtn");
+
+let savedTheme = localStorage.getItem("theme");
+
+if(savedTheme === "light"){
+
+    document.body.classList.add("light-theme");
+
+    themeBtn.innerText = "🌙 Dark Mode";
+
+}
+else{
+
+    themeBtn.innerText = "☀️ Light Mode";
+
+}
+
+themeBtn.addEventListener("click", function(){
+
+    document.body.classList.toggle("light-theme");
+
+    if(document.body.classList.contains("light-theme")){
+
+        localStorage.setItem("theme", "light");
+
+        themeBtn.innerText = "🌙 Dark Mode";
+
+    }
+    else{
+
+        localStorage.setItem("theme", "dark");
+
+        themeBtn.innerText = "☀️ Light Mode";
+
+    }
+
 });

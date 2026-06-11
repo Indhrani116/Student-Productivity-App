@@ -21,3 +21,6 @@ document.getElementById("dashboardPending").innerText = pendingTasks;
 document.getElementById("dashboardCompleted").innerText = completedTasks;
 
 document.getElementById("dashboardProgress").innerText = progress + "%";
+
+document.getElementById("progressFill").style.width =
+    progress + "%";
